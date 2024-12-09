@@ -1,48 +1,245 @@
-/* Establece el estilo base para el sitio */
+/* General styles for all devices */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    color: #333;
-}
-
-/* Estilo para el encabezado */
-header {
-    background-color: #007BFF;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1, h2, h3 {
+    font-weight: normal;
+  }
+  
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* Estilo para las secciones */
-main {
-    padding: 20px;
-}
-
-.contenido {
-    background-color: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.contenido h2 {
-    color: #007BFF;
-}
-
-/* Estilo para el pie de página */
-footer {
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Header styles */
+  header {
     background-color: #333;
     color: white;
-    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    width: 50px;
+  }
+  
+  .file-tabs ul {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .file-tabs a {
+    color: white;
     padding: 10px;
-    position: fixed;
+  }
+  
+  .file-tabs a.active {
+    background-color: #444;
+  }
+  
+  .navbar-container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* Main sections */
+  section {
+    padding: 2rem 0;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Home Section */
+  .home {
+    background-color: #f4f4f4;
+  }
+  
+  .home .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin-top: 20px;
+  }
+  
+  /* Servicios Section */
+  .servicios {
+    background-color: #fff;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .card img {
     width: 100%;
-    bottom: 0;
-}
+    height: auto;
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Contact Section */
+  .contacto {
+    background-color: #f9f9f9;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  button {
+    width: 200px;
+    margin: 0 auto;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For tablets (up to 768px) */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .file-tabs ul {
+      flex-direction: column;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr 1fr; /* 2 columns instead of 3 */
+    }
+  
+    .card {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .contacto form {
+      width: 90%;
+    }
+  
+    .button {
+      font-size: 1rem;
+    }
+  }
+  
+  /* For mobile devices (up to 480px) */
+  @media (max-width: 480px) {
+    header {
+      padding: 0.5rem 0;
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .file-tabs ul {
+      padding-left: 0;
+    }
+  
+    .file-tabs a {
+      padding: 10px;
+    }
+  
+    .home .container {
+      padding: 0 10px;
+    }
+  
+    .servicios .container, .contacto .container {
+      padding: 0 10px;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr; /* 1 column for small devices */
+    }
+  
+    .card h3 {
+      font-size: 1rem;
+    }
+  
+    .button {
+      padding: 10px 15px;
+    }
+  
+    .contacto form {
+      width: 90%;
+    }
+  }
+  
