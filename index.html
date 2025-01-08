@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="RODRIPT5 PT Website">
   <title>RODRIPT5 ENTRENAMIENTOS A MEDIDA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>RODRIPT5</h1>
             <div class="navbar">
-                <img src="https://via.placeholder.com/50" alt="Logo" class="navbar-logo">
+              <a href="index.html">
+                <img src="images/icon.webp" alt="Logo" class="navbar-logo">
+              </a>
+              <h1 class="title">RODRIPT5</h1>
                 <nav class="file-tabs">
                   <ul>
                     <li><a href="#home" class="active">Intro</a></li>
@@ -24,7 +27,7 @@
                 </nav>
             </div>
             <div class="navbar-container">
-              <p>RODRIPT5, tu Entrenador personal, entrenamientos y asesorías a tu medida.</p>
+              <p id="navbar-desc">Tu Entrenador personal, entrenamientos y asesorías a tu medida.</p>
             </div>
         </div>
     </header>    
@@ -137,24 +140,35 @@
       </div>
       <div id="contact-others" class="container">
         <p>Tambien tienes mi num y redes sociales.</p>
-        <a href="https://instagram.com/rodript5" target="_blank" class="instagram-button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37a4 4 0 1 1-4.47-4.36A4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-          </svg>
-          Follow @rodript5
-        </a>
+        <div class="phone-container">
+          <a href="tel:+34661213025" class="telephone-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.88 19.88 0 0 1-8.63-3.07 19.51 19.51 0 0 1-6-6A19.88 19.88 0 0 1 3.08 4.18 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .72 2.82 2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.82.72A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            661213025
+          </a>
+        </div>
+        <div class="ig-container">
+          <a href="https://instagram.com/rodript5" target="_blank" class="instagram-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="16" height="16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37a4 4 0 1 1-4.47-4.36A4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+            </svg>
+            Follow @rodript5
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2024 My Website. All rights reserved.</p>
+      <p>&copy; 2024 OrriPT5 Website. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- SLIDE ITEM -->
   <script>
     // Select the container where you want the slides
     const previewContainer = document.querySelector('.home .container');
@@ -166,7 +180,6 @@
       "https://via.placeholder.com/600x300?text=Slide+3"
     ];
   
-    // Create a new div for the slideshow
     const slideShow = document.createElement('div');
     slideShow.classList.add('slideshow');
     slideShow.innerHTML = `
